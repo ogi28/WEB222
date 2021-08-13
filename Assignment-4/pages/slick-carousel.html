@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <title>Slick Carousel</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="mvp.css">
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img alt="Logo" src="assets/logo.png" height="70"></a>
+        <ul>
+            <li><a href="pages/slick-carousel.html">Slick Carousel</a></li>
+            <li><a href="pages/fancybox.html">Fancybox</a></li>
+            <li><a href="pages/owl-carousel.html">Owl Carousel</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <header>
+            <h2>Slick Carousel</h2>
+        </header>
+    </section>
+    <article>
+        <div class="slider-wrapper" style="padding: 0 20px">
+            <div class="single-item">
+                <div>
+                    <img src="https://picsum.photos/id/1031/1024/400" alt="">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/1029/1024/400" alt="">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/1033/1024/400" alt="">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/1048/1024/400" alt="">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/1054/1024/400" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
+    <section>
+        
+    </section>
+</main>
+<footer>
+    <hr>
+    <p><small>Copyright © 2021 Ogulcan Tayhan, All Rights Reserved</small></p>
+</footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+<script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.single-item').slick();
+    });
+</script>
+</body>
+</html>

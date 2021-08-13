@@ -1,0 +1,31 @@
+header nav {
+    margin-bottom: unset;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-pane {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.right-page {
+    flex: 1;
+    padding-left: 10px;
+}
+
+#animatedModel {
+    background-color: #DB2417;
+    color: white;
+    font-weight: bold;
+    display: none;
+}
+
+#animatedModel .content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}

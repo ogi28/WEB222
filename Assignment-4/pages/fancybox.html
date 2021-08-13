@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <title>Fancybox</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+    <link rel="stylesheet" href="node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="mvp.css">
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img alt="Logo" src="assets/logo.png" height="70"></a>
+        <ul>
+            <li><a href="pages/slick-carousel.html">Slick Carousel</a></li>
+            <li><a href="pages/fancybox.html">Fancybox</a></li>
+            <li><a href="pages/owl-carousel.html">Owl Carousel</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+   <section>
+       <header>
+           <h2>Fancybox</h2>
+           <small>Click the image</small>
+       </header>
+       <hr>
+       <aside style="display: flex; justify-content: center">
+           <a data-fancybox="gallery" data-caption="Caption for single image"
+              href="https://picsum.photos/id/0/1024/1024">
+               <img src="https://picsum.photos/id/0/256/256" alt="" width="128">
+           </a>
+       </aside>
+   </section>
+</main>
+<footer>
+    <hr>
+    <p><small>Copyright © 2021 Ogulcan Tayhan, All Rights Reserved</small></p>
+</footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+<script>
+    $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            //"zoom",
+            //"share",
+            "slideShow",
+            //"fullScreen",
+            //"download",
+            "thumbs",
+            "close"
+        ]
+    });
+</script>
+</body>
+</html>

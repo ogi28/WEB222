@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <title>Owl Carousel</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="mvp.css">
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img alt="Logo" src="assets/logo.png" height="70"></a>
+        <ul>
+            <li><a href="pages/slick-carousel.html">Slick Carousel</a></li>
+            <li><a href="pages/fancybox.html">Fancybox</a></li>
+            <li><a href="pages/owl-carousel.html">Owl Carousel</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <header>
+            <h2>Owl Carousel</h2>
+            <small>Slide items</small>
+        </header>
+        <div class="owl-carousel owl-theme">
+            <aside>
+                <img src="https://picsum.photos/id/1015/320/160" alt="">
+            </aside>
+            <aside>
+                <img src="https://picsum.photos/id/1016/320/160" alt="">
+            </aside>
+            <aside>
+                <img src="https://picsum.photos/id/1020/320/160" alt="">
+            </aside>
+            <aside>
+                <img src="https://picsum.photos/id/1018/320/160" alt="">
+            </aside>
+            <aside>
+                <img src="https://picsum.photos/id/1019/320/160" alt="">
+            </aside>
+        </div>
+    </section>
+</main>
+<footer>
+    <hr>
+    <p><small>Copyright © 2021 Ogulcan Tayhan, All Rights Reserved</small></p>
+</footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel();
+    });
+</script>
+</body>
+</html>

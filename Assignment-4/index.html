@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="./">
+    <title>Web A5</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+    <link rel="stylesheet" href="node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="mvp.css">
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img alt="Logo" src="assets/logo.png" height="70"></a>
+        <ul>
+            <li><a href="pages/slick-carousel.html">Slick Carousel</a></li>
+            <li><a href="pages/fancybox.html">Fancybox</a></li>
+            <li><a href="pages/owl-carousel.html">Owl Carousel</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <div class="container">
+            <div class="left-pane">
+                <div class="registration">
+                    <form action="">
+                        <h3>Registration Form</h3>
+                        <label for="student-id">Student Id</label>
+                        <input type="text" id="student-id">
+                        <label for="student-name">Student Name</label>
+                        <input type="text" id="student-name">
+                        <label for="course">Course Name</label>
+                        <input id="course" type="text">
+                        <label for="dob">Date Of Birth</label>
+                        <input id="dob" type="date">
+                        <input type="submit" value="Submit" onclick="handleFormSubmit(event)">
+                        <input type="reset" value="Reset">
+                    </form>
+                </div>
+            </div>
+            <div class="right-page">
+                <div>
+                    <h3>Students</h3>
+                    <table id="student-table">
+                        <thead>
+                        <tr>
+                            <th>Student Id</th>
+                            <th>Student Name</th>
+                            <th>Course Name</th>
+                            <th>DOB</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>123124</td>
+                            <td>
+                                <a data-fancybox=""
+                                   data-animation-duration="500"
+                                   data-src="#animatedModel"
+                                   href="javascript:">Ogulcan Tayhan</a>
+                            </td>
+                            <td>WebDesign</td>
+                            <td>28.10.1995</td>
+                        </tr>
+                        <tr>
+                            <td>123136</td>
+                            <td>John Johnalot</td>
+                            <td>WebDesign</td>
+                            <td>12.12.2012</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <hr>
+    <p><small>Copyright © 2021 Ogulcan Tayhan, All Rights Reserved</small></p>
+</footer>
+<div id="animatedModel">
+    <div class="content">
+        <div class="text">
+            I am a student of Seneca College
+        </div>
+        <img src="https://endless.dilokuluburada.com/uploads/1/partner/389/o_1dqh68o9s1dom1m1dp1e1hhj1lo87p.png"
+             width="200"
+             alt="">
+    </div>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+<script>
+    $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            //"zoom",
+            //"share",
+            "slideShow",
+            //"fullScreen",
+            //"download",
+            "thumbs",
+            "close"
+        ]
+    });
+
+    function handleFormSubmit(e) {
+        e.preventDefault();
+
+        const tBody = document.querySelector('#student-table tbody');
+        const newRow = createNewRow(
+            getInputValue('student-id'),
+            getInputValue('student-name'),
+            getInputValue('course'),
+            getInputValue('dob'),
+        );
+
+        tBody.append(newRow);
+    }
+
+    function getInputValue(inputId) {
+        return document.getElementById(inputId).value;
+    }
+
+    function createNewRow(studentId, studentName, course, dob) {
+        const tr = document.createElement('TR');
+        tr.innerHTML = `<td>${studentId}</td>
+                    <td>${studentName}</td>
+                    <td>${course}</td>
+                    <td>${formatDate(new Date(dob))}</td>`;
+        return tr;
+    }
+
+    function formatDate(date) {
+        return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+    }
+</script>
+</body>
+</html>

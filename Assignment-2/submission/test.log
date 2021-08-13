@@ -1,0 +1,18 @@
+
+> web222-assignment-2@2.1.0 test /home/john/Desktop/a2
+> jest --
+
+PASS src/problem-02.test.js
+PASS src/problem-03.test.js
+PASS src/problem-06.test.js
+PASS src/problem-00.test.js
+PASS src/problem-04.test.js
+PASS src/problem-05.test.js
+PASS src/problem-07.test.js
+PASS src/problem-01.test.js
+
+Test Suites: 8 passed, 8 total
+Tests:       72 passed, 72 total
+Snapshots:   0 total
+Time:        1.281 s
+Ran all test suites.
